@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+<bean id="employeebean" class="bean.Employee">  
+	<!-- <property name="Ename" value="Vimal Jaiswal"></property>
+ 	<property name="eId" value="9090"></property> -->
+ 	<constructor-arg value="sangit" name="name" type="String"></constructor-arg>
+ 	<constructor-arg value="123"></constructor-arg>
+ 	<constructor-arg>
+ 		<list>
+ 			<value>sangit</value>
+ 			<value>rj</value>
+ 		</list>
+ 	</constructor-arg>
+ 	<constructor-arg>
+ 		<ref bean="addressbean"/>
+ 	</constructor-arg>
+</bean>  
+ 
+<bean id="addressbean" class="bean.Address">
+	<constructor-arg value="TN"></constructor-arg>
+	<constructor-arg value="chennai"></constructor-arg>
+</bean>
+</beans> 
